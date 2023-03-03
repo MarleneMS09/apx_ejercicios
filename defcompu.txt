@@ -1,0 +1,49 @@
+Todas las computadoras realizan 4 funciones básicas:
+
+    Recepción de inputs: pueden recibir instrucciones de aquellas personas que las utilizan,
+    Almacenamiento de información: guardan toda la data que necesitamos, junto con todos
+     los programas que la computadora utiliza para poder llevar adelante sus funciones,
+    Procesamiento de información: pueden procesar y transformar grandes cantidades de información,
+    Generación de outputs: se encargan de devolver la información nuevamente a los usuarios, 
+    una vez que la misma haya sido procesada.
+
+ 👉 El microprocesador es un circuito electrónico que se encarga de realizar operaciones aritméticas y lógicas simples, como sumar, restar, multiplicar o dividir.
+Lo que queremos decir es que el código escrito en cualquier lenguaje de programación 
+se traduce a código de máquina (código binario), que está formado por la combinación de unos (1) 
+y ceros (0), y es el que ejecuta realmente el microprocesador a través de millones de operaciones
+ matemáticas simples.
+👉 La unidad de almacenamiento (disco rígido o disco sólido) contiene toda la información 
+que está guardada en una computadora, y la preserva, incluso cuando está apagada.
+👉 La memoria RAM o memoria de acceso aleatorio, almacena temporalmente todo lo que ocurre, 
+como el sistema operativo y los programas que abrimos y con los que interactuemos. 
+Es allí donde se cargan todas las instrucciones que ejecuta el procesador. 
+La mayoría de las cosas que hacemos con código influyen directamente en la memoria RAM.
+Cuando hablamos de programar, nos referimos a la acción de escribir en un determinado lenguaje 
+de programación una serie de instrucciones, que conformarán un programa o una aplicación 
+(de escritorio/mobile/web), en el contexto de un sistema operativo.
+👉 El sistema operativo
+
+Todos los programas funcionan en el marco de un sistema operativo.
+Este es el software más importante de cualquier computadora y todas necesitan uno para poder
+funcionar.
+👉 El sistema operativo
+
+Todos los programas funcionan en el marco de un sistema operativo.
+Este es el software más importante de cualquier computadora y todas necesitan uno para poder 
+funcionar.
+👉 ¿Qué es un programa?
+
+Un programa es un conjunto de instrucciones lógicas que nos permite realizar una tarea específica o resolver un problema.
+
+Los programas son los encargados de recibir la información que proporcionan los usuarios 
+(u otros programas) en forma de inputs, los procesan y devuelven outputs, es decir, un resultado.
+ Ese es el flujo habitual de los datos dentro del software.
+
+Conocer el concepto Input/Output nos va a permitir entender la forma en la que se construyen 
+(o deberían) las aplicaciones. Cualquier programa complejo se puede abstraer en pequeñas partes,
+también llamadas subrutinas, que se alimentan de inputs y cumplen una función específica
+dentro del sistema.
+Para facilitar la tarea de lxs desarrolladores, existen diversos lenguajes de programación 
+que se parecen muchísimo más al lenguaje natural que al lenguaje de máquina
+ (Ej: JavaScript, Python, Java, etc). 
+Cada uno de ellos posee sus propias reglas (o sintaxis) y también sus propios usos. 

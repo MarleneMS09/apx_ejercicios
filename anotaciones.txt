@@ -1,0 +1,460 @@
+1. ¿Qué es JavaScript?
+JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web dinámicas. 
+Una página web dinámica es aquella que incorpora efectos como texto que aparece y desaparece, animaciones,
+ acciones que se activan al pulsar botones y ventanas con mensajes de aviso al usuario.
+
+2. Programación básica
+Antes de comenzar a desarrollar páginas web y utilidades con JavaScript, es necesario conocer los elementos básicos
+ con los que se construyen las aplicaciones.
+
+Si nunca has programado, aquí se te explica en detalle y comenzando desde cero los conocimientos básicos necesarios
+ para poder entender posteriormente la programación avanzada, que es la que se utiliza para crear las aplicaciones reales.
+
+2.1. Variables
+Para hacerse una idea de qué es y cómo funciona una variable, imagina una caja en la cual puedes guardar diferentes valores: 
+palabras, números, e incluso conjuntos. Las variables funcionan como estas cajas: tienen un identificador, que es su nombre, 
+y nos sirven para guardar valores.
+
+Las variables en los lenguajes de programación siguen una lógica similar a las variables utilizadas en otros ámbitos como las 
+matemáticas. Gracias a las variables es posible crear "programas genéricos", es decir, programas que funcionan siempre igual 
+independientemente de los valores concretos utilizados.
+
+Si en matemática no existieran las variables, no se podrían definir las ecuaciones y fórmulas. 
+De igual forma, en programación no se podrían hacer programas realmente útiles sin las variables.
+
+Si no existieran variables, un programa que suma dos números podría escribirse como:
+
+resultado = 3 + 1
+
+El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número de la suma sea el 3 y
+ el segundo número sea el 1. En cualquier otro caso, el programa obtiene un resultado incorrecto.
+
+Una vez declarada una variable, el siguiente paso es inicializarla.
+
+Se le dice "inicializar" una variable cuando se le asigna un valor mediante el signo "=". 
+En la siguientes líneas, primero se declara la variable llamada primer_numero y luego se inicializa, asignándole un valor numérico:
+
+var primer_numero;
+primer_numero = 5;
+
+También es posible declarar e inicializar una variable en una sola línea de código. 
+El código para realizar esto en el ejemplo anterior sería:
+
+var primer_numero = 5;
+
+El nombre de una variable también se conoce como identificador y debe cumplir las siguientes normas:
+
+Sólo puede estar formado por letras, números y los símbolos $ (dólar) y _ (guión bajo).
+El primer carácter no puede ser un número.
+Por tanto, las siguientes variables tienen nombres correctos:
+
+var $numero1;
+var _$letra;
+var $$$otroNumero;
+var $_a__$4;
+
+Sin embargo, las siguientes variables tienen identificadores incorrectos:
+
+var 1numero;
+//Este ejemplo tiene un error porque empieza por un número.
+
+var numero;1_123;
+//Este ejemplo tiene un error porque contiene un carácter ";"
+
+
+2.2. Tipos de variables
+
+Aunque todas las variables de JavaScript se crean de la misma forma (mediante la palabra reservada var), 
+la forma en la que se les asigna un valor depende del tipo de valor que se quiere almacenar (números, textos, etc.)
+
+2.2.1. Numéricas
+Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o decimales (llamados float en inglés). 
+En este caso, el valor se asigna indicando directamente el número entero o decimal. Los números decimales utilizan el carácter .
+(punto) en vez de , (coma) para separar la parte entera y la parte decimal:
+
+var iva = 16; // variable tipo entero
+var total = 234.65; // variable tipo decimal
+
+2.2.2. Cadenas de texto
+Se utilizan para almacenar caracteres, palabras y/o frases de texto. Este tipo de variables también son llamadas string,
+ por su nombre en inglés. Para asignar el valor a la variable, se encierra el valor entre comillas dobles o simples, 
+ para delimitar su comienzo y su final:
+
+var mensaje = "Bienvenido a nuestro sitio web";
+var nombreProducto = 'Producto ABC';
+var letraSeleccionada = 'c';
+
+2.2.3. Arrays
+
+En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. 
+No obstante, el término array es el más utilizado y es una palabra comúnmente aceptada en el entorno de la programación.
+
+Un array es una colección de variables, su utilidad se comprende mejor con un ejemplo sencillo: 
+si una aplicación necesita manejar los días de la semana, se podrían crear siete variables de tipo texto:
+
+var dia1 = "Lunes";
+var dia2 = "Martes";
+...
+var dia7 = "Domingo";
+
+Aunque el código anterior no es incorrecto, sí que es poco eficiente y complica en exceso la programación. 
+Si en vez de los días de la semana se tuviera que guardar el nombre de los meses del año,
+ el nombre de todos los países del mundo o las mediciones diarias de temperatura de los últimos 100 años, 
+ se tendrían que crear decenas o cientos de variables.
+
+En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de variables o array. 
+El ejemplo anterior se puede rehacer de la siguiente forma:
+
+var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+Ahora, una única variable llamada dias almacena todos los valores relacionados entre sí, en este caso los días de la semana. 
+Para definir un array, se utilizan los caracteres "[" y "]" para delimitar su comienzo y su final y se utiliza el carácter "," 
+(coma) para separar sus elementos:
+
+var nombre_array = [valor1, valor2, ..., valorN];
+
+Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. 
+Cada elemento se accede indicando su posición dentro del array. La única complicación, que es responsable de muchos errores 
+cuando se empieza a programar, es que las posiciones de los elementos empiezan a contarse en el 0 y no en el 1.
+n el ejemplo del array con los días de la semana, la posición de cada elemento sería:
+
+var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+dias[0] sería "Lunes"
+dias[1] sería "Martes"
+dias[2] sería "Miércoles"
+dias[3] sería "Jueves"
+dias[4] sería "Viernes"
+dias[5] sería "Sábado"
+dias [6] sería "Domingo"
+
+En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. 
+Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array. 
+Como se ha comentado, las posiciones se empiezan a contar en el 0, por lo que el primer elemento ocupa la posición 0 y 
+se accede a el mediante dias[0].
+
+El valor dias[5] hace referencia al elemento que ocupa la sexta posición dentro del array dias.
+ Como las posiciones empiezan a contarse en 0, la posición 5 hace referencia al sexto elemento, en este caso, el valor Sábado.
+
+2.2.4. Booleanos
+
+Las variables de tipo boolean o booleano también se conocen con el nombre de variables de tipo lógico.
+ Aunque para entender realmente su utilidad se debe estudiar la programación avanzada, su funcionamiento básico es muy sencillo.
+
+Una variable de tipo boolean almacena un tipo especial de valor que solamente puede tomar dos valores: true (verdadero) o 
+false (falso). No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.
+
+Los únicos valores que pueden almacenar estas variables son true y false, por lo que no pueden utilizarse los valores verdadero 
+y falso. A continuación se muestra un par de variables de tipo booleano:
+
+var clienteRegistrado = false;
+var ivaIncluido = true;
+
+2.3. Operadores
+
+Las variables por sí solas son de poca utilidad. Hasta ahora, sólo se ha visto cómo crear variables de diferentes tipos . 
+Para hacer programas realmente útiles, son necesarias otro tipo de herramientas.
+
+Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y 
+comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y
+ tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.
+
+2.3.1. Asignación
+El operador de asignación es el más utilizado y el más sencillo. Este operador se utiliza para guardar un valor específico 
+en una variable. El símbolo utilizado es = :
+
+var numero1 = 3;
+
+A la izquierda del operador, siempre debe indicarse el nombre de una variable. A la derecha del operador, 
+se pueden indicar variables, valores, condiciones lógicas, etc:
+
+var numero1 = 3;
+var numero2 = 4;
+
+// Ahora, la variable numero1 vale 5
+numero1 = 5;
+
+// Ahora, la variable numero1 vale 4
+numero1 = numero2;
+
+La asignación siempre se realiza a una variable, por lo que en la izquierda no se puede indicar un número. 
+Eso significa que el siguiente código sería erróneo:
+
+5 = numero1;
+
+2.3.2. Incremento y decremento
+
+Estos dos operadores solamente son válidos para las variables numéricas y se utilizan para incrementar o decrementar en una unidad 
+el valor de una variable.
+
+Ejemplo:
+
+var numero = 5;
+numero++;
+// El valor final de numero = 6
+
+El operador de incremento se indica mediante el sufijo ++ en el nombre de la variable. El resultado es que el valor de esa
+ variable se incrementa en una unidad. Por tanto, el anterior ejemplo es equivalente a:
+
+var numero = 5;
+numero = numero + 1;
+// El valor final de numero = 6
+
+De forma equivalente, el operador decremento (indicado como un sufijo -- en el nombre de la variable) se utiliza para decrementar el valor de la variable:
+
+var numero = 5;
+numero--;
+// El valor final de numero = 4
+
+El anterior ejemplo es equivalente a:
+
+var numero = 5;
+numero = numero - 1;
+// El valor final de numero = 4
+
+2.3.3. Lógicos
+
+Los operadores lógicos son imprescindibles para realizar aplicaciones complejas, ya que se utilizan para tomar decisiones sobre las instrucciones que debería ejecutar el programa en función de ciertas condiciones.
+
+El resultado de cualquier operación que utilice operadores lógicos siempre es un valor lógico o booleano.
+
+2.3.3.1. Negación
+Uno de los operadores lógicos más utilizados es el de la negación. Se utiliza para obtener el valor contrario al valor de la variable:
+
+var visible = true;
+var oculto = !visible;
+
+// En el ejemplo mostrado, la variable "visible" tiene un valor verdadero. Dado esto, en la segunda línea del código se presenta una segunda variable llamada "oculto", que es la negación de la variable "visible". Como "visible" tenía un valor true (verdadero), entonces su valor contrario es false (falso). Esto quiere decir que el valor de la variable "oculto" es false.
+
+La negación lógica se obtiene prefijando el símbolo ! al identificador de la variable. El funcionamiento de este operador se resume en la siguiente tabla:
+
+
+variable !variable
+true false
+false true
+
+Si la variable original es de tipo booleano, es muy sencillo obtener su negación.
+
+Sin embargo, ¿qué sucede cuando la variable es un número o una cadena de texto? Para obtener la negación en este tipo de variables, se realiza en primer lugar su conversión a un valor booleano:
+
+- Si la variable contiene un número, su valor booleano es false si vale 0 y es true para cualquier otro número (positivo o negativo, decimal o entero).
+
+- Si la variable contiene una cadena de texto, su valor booleano es false si la cadena es vacía ("") y es true en cualquier otro caso.
+
+Ejemplos:
+var cantidad = 0;
+vacio = !cantidad;
+// Al finalizar este ejemplo, el valor de vacio es true. Esto pasa porque al incio cantidad tiene el valor numérico 0, que se interpreta como false. La negación de cantidad entonces sería true (verdadero), y ese es el valor que se le asigna a la variable vacio.
+
+cantidad = 2;
+vacio = !cantidad;
+// Al finalizar este ejemplo, el valor de vacio es false. Esto pasa porque al incio cantidad tiene el valor numérico 2. que se interpreta como true (verdadero). La negación de cantidad entonces sería false (falso), y ese es el valor que se le asigna a la variable vacio.
+
+var mensaje = "";
+mensajeVacio = !mensaje;
+// Al finalizar este ejemplo, el valor de mensajeVacio es true. Esto pasa porque al inicio mensaje es un string vacío, que se interpreta como false. La negación de mensaje entonces sería true, y ese es el valor que se asigna a la variable mensajeVacio.
+
+mensaje = "Bienvenido";
+mensajeVacio = !mensaje;
+// Al finalizar este ejemplo, el valor de mensajeVacio es false. Esto pasa porque al inicio mensaje es un string que no está vacío, que se interpreta como true. La negación de mensaje entonces sería false, y ese es el valor que se asigna a la variable mensajeVacio.
+
+2.3.3.2. AND
+
+La operación lógica AND obtiene su resultado combinando dos valores booleanos. El operador se indica mediante el símbolo && y su resultado solamente es true si los dos operandos son true.
+
+var valor1 = true;
+var valor2 = false;
+resultado = valor1 && valor2;
+
+// En este caso, los operandos valor1 y valor2 son true y false. 
+Por lo tanto, el valor final de la variable resultado en esta operación es false.
+
+valor1 = true;
+valor2 = true;
+resultado = valor1 && valor2;
+
+// En este caso, ambos operandos valor1 y valor2 son true. Por lo tanto, el valor final de la variable resultado en esta operación es true.
+
+2.3.3.3. OR
+
+La operación lógica OR también combina dos valores booleanos. 
+El operador se indica mediante el símbolo || y su resultado es true 
+si alguno de los dos operandos es true:
+
+var valor1 = true;
+var valor2 = false;
+resultado = valor1 || valor2;
+
+// En este caso, por lo menos uno de los operandos tiene el valor true, 
+que es la variable valor1. Por lo tanto, el valor final de la variable resultado 
+en esta operación es true.
+
+valor1 = false;
+valor2 = false;
+resultado = valor1 || valor2;
+
+// En este caso, ninguna de las variables valor1 o valor2 tiene el valor true.
+ Por lo tanto, el valor final de la variable resultado en esta operación es false.
+
+2.3.4. Matemáticos
+
+JavaScript permite realizar manipulaciones matemáticas sobre el valor de las variables numéricas. Los operadores definidos son: suma (+), resta (-), multiplicación (*) y división (/). Ejemplo:
+
+var numero1 = 10;
+var numero2 = 5;
+
+resultado = numero1 / numero2; // resultado = 2
+resultado = 3 + numero1; // resultado = 13
+resultado = numero2 – 4; // resultado = 1
+resultado = numero1 * numero 2; // resultado = 50
+
+Además de los cuatro operadores básicos, JavaScript define otro operador matemático que no es sencillo de entender cuando se estudia por primera vez, pero que es muy útil en algunas ocasiones.
+
+Se trata del operador "módulo", que calcula el residuo de la división entera de dos números. Si se divide por ejemplo 10 y 5, la división es exacta y da un resultado de 2. El residuo de esa división es 0, por lo que módulo de 10 y 5 es igual a 0.
+
+Sin embargo, si se divide 9 entre 5, la división no es exacta, el resultado es 1 y el residuo 4, por lo que módulo de 9 y 5 es igual a 4.
+
+El operador módulo en JavaScript se indica mediante el símbolo % (que no debe confundirse con el cálculo del porcentaje):
+
+var numero1 = 10;
+var numero2 = 5;
+resultado = numero1 % numero2; // resultado = 0
+
+numero1 = 9;
+numero2 = 5;
+resultado = numero1 % numero2; // resultado = 4
+
+2.3.5. Relacionales
+
+Los operadores relacionales definidos por JavaScript son idénticos a los que definen las matemáticas: mayor que (>), menor que (=), menor o igual ( numero2*; // El valor final de resultado = false, porque 3 no es mayor que 5.
+resultado = numero1 = numero2; // resultado = true
+*resultado = numero1
+
+
+En el siguiente ejemplo, el operador "==" compara variables.
+
+var numero1 = 5;
+resultado = numero1 == 3;
+// En la primera línea, se le asigna el valor numérico 5 a la variable numero1. En la segunda línea, se le asigna a resultado el valor resultante de la comparación entre numero1 y el valor numérico 3. Como el valor de numero1 es 5, que no es igual a 3, entonces resultado tiene el valor de false al finalizar el código.
+
+Los operadores relacionales también se pueden utilizar con variables de tipo cadena de texto:
+
+var texto1 = "hola";
+var texto2 = "hola";
+var texto3 = "adios";
+
+resultado = texto1 == texto3;
+// El valor final de resultado = false, porque se compara si texto1 es igual a texto3, lo cual es falso.
+
+resultado = texto1 != texto2;
+// El valor final de resultado = false, porque se compara si texto1 es diferente a texto2, lo cual es falso.
+
+Cuando se utilizan cadenas de texto, los operadores "mayor que" (>) y "menor que" *(
+
+2.4. Estructuras de control de flujo
+
+Los programas que se pueden realizar utilizando solamente variables y operadores son una simple sucesión lineal de instrucciones básicas.
+
+Sin embargo, se pueden realizar programas que sigan una serie instrucciones sólo en casos predeterminados, o programas que repitan de forma eficiente una misma instrucción, como por ejemplo, sumar un determinado valor a todos los elementos de un array.
+
+Para realizar este tipo de programas son necesarias las estructuras de control de flujo, que son instrucciones del tipo "si se cumple esta condición, hazlo; si no se cumple, haz esto otro". También existen instrucciones del tipo "repite esto mientras se cumpla esta condición".
+
+Si se utilizan estructuras de control de flujo, los programas dejan de ser una sucesión lineal de instrucciones para convertirse en programas inteligentes que pueden tomar decisiones en función del valor de las variables.
+
+2.4.1. Estructura if
+
+La estructura más utilizada en JavaScript y en la mayoría de lenguajes de programación es la estructura if. Se emplea para tomar decisiones en función de una condición. Su definición formal es:
+
+if(condicion) {
+...
+}
+
+Si la condición se cumple (es decir, si su valor es true) se ejecutan todas las instrucciones que se encuentran dentro de {...}. Si la condición no se cumple (es decir, si su valor es false) no se ejecuta ninguna instrucción contenida en {...} y el programa continúa ejecutando el resto de instrucciones del script.
+
+Ejemplo:
+
+var verMensaje = true;
+
+if(verMensaje) {
+var mensaje = “Hola Mundo”;
+}
+
+En el ejemplo anterior, la variable mensaje sí se crea, ya que la variable verMensaje tiene un valor de true y por tanto, el programa entra dentro del bloque de instrucciones del if.
+
+El ejemplo se podría reescribir también como:
+
+var verMensaje = true;
+
+if(verMensaje == true) {
+var mensaje = “Hola Mundo”;
+}
+
+En este caso, la condición es una comparación entre el valor de la variable verMensaje y el valor true. Como los dos valores coinciden, la igualdad se cumple y por tanto la condición es cierta, su valor es true y se ejecutan las instrucciones contenidas en ese bloque del if.
+
+Los operadores AND y OR permiten encadenar varias condiciones simples para construir condiciones complejas:
+
+var mostrado = false;
+var usuarioPermiteMensajes = true;
+
+if(!mostrado && usuarioPermiteMensajes) {
+var mensaje = "Este mensaje sí existe";
+}
+
+La condición anterior está formada por una operación AND sobre dos variables. A su vez, a la primera variable se le aplica el operador de negación antes de realizar la operación AND. De esta forma, como el valor de mostrado es false, el valor !mostrado sería true. Como la variable usuarioPermiteMensajes vale true, el resultado de !mostrado && usuarioPermiteMensajes sería igual a true && true, por lo que el resultado final de la condición del if() sería true y por tanto, se ejecutan las instrucciones que se encuentran dentro del bloque del if().
+
+2.4.2. Estructura if...else
+
+En ocasiones, las decisiones que se deben realizar no son del tipo "si se cumple la condición, hazlo; si no se cumple, no hagas nada". Normalmente las condiciones suelen ser del tipo "si se cumple esta condición, hazlo; si no se cumple, haz esto otro".
+
+Para este segundo tipo de decisiones, existe una variante de la estructura if llamada if...else. Su definición formal es la siguiente:
+
+if(condicion) {
+...
+}
+else {
+...
+}
+
+Si la condición se cumple (es decir, si su valor es true) se ejecutan todas las instrucciones que se encuentran dentro del if(). Si la condición no se cumple (es decir, si su valor es false) se ejecutan todas las instrucciones contenidas en else { }. Ejemplo:
+
+var edad = 18;
+
+if(edad >= 18) {
+var mensaje1 = "Eres mayor de edad";
+}
+else {
+var mensaje2 = "Todavía eres menor de edad";
+}
+
+Si el valor de la variable edad es mayor o igual que el valor numérico 18, la condición del if() se cumple y por tanto, se ejecutan sus instrucciones y se muestra el mensaje "Eres mayor de edad". Sin embargo, cuando el valor de la variable edad no es igual o mayor que 18, la condición del if() no se cumple, por lo que automáticamente se ejecutan todas las instrucciones del bloque else { }. En este caso, se mostraría el mensaje "Todavía eres menor de edad".
+
+
+El siguiente ejemplo compara variables de tipo cadena de texto:
+var nombre = "";
+
+if(nombre == "") {
+alert("Aún no nos has dicho tu nombre");
+}
+else {
+alert("Hemos guardado tu nombre");
+}
+
+La condición del if() anterior se construye mediante el operador ==, que es el que se emplea para comparar dos valores (no confundir con el operador = que se utiliza para asignar valores). En el ejemplo anterior, si la cadena de texto almacenada en la variable nombre es vacía (es decir, es igual a "") se muestra el mensaje definido en el if(). En otro caso, se muestra el mensaje definido en el bloque else { }.
+La estructura if...else se puede encadenar para realizar varias comprobaciones seguidas:
+
+if(edad < 12) {
+var mensaje1 = “Todavía eres muy pequeño”;
+}
+else if(edad < 19) {
+var mensaje2 = "Eres un adolescente";
+}
+else if(edad < 35) {
+var mensaje3 = "Aún sigues siendo joven";
+}
+else {
+var mensaje4 = "Piensa en cuidarte un poco más";
+}
+
+No es obligatorio que la combinación de estructuras if...else acabe con la instrucción else, ya que puede terminar con una instrucción de tipo else if().
+
+

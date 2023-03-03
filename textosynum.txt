@@ -1,0 +1,7 @@
+    String: es una secuencia de caracteres escritos entre comillas (“”), que se usa para representar texto.
+    Number: es un tipo de dato que permite representar valores numéricos.
+    BigInt: es un tipo de dato numérico que puede representar números enteros muy grandes.
+    Boolean: representa una entidad lógica. Solo puede tener como valor true o false, es decir, verdadero o falso.
+    Undefined: es el tipo de variable a la que no se le ha asignado ningún valor.
+
+    

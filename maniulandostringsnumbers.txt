@@ -1,0 +1,83 @@
+Manipulando strings y numbers
+Aprendiendo sobre string.length
+
+En el mundo de la tecnología, el auto-aprendizaje es esencial. Constantemente salen herramientas, lenguajes o tecnologías nuevas que debes aprender por tu cuenta para mantenerte al día. Por eso, es importante que, desde los inicios de tu camino en el mundo del código, te acostumbres a aprender por tu cuenta y a tomar el control de tu desarrollo profesional.
+
+Internet es un excelente recurso para aprender por tu cuenta. Es como una gran biblioteca de conocimiento siempre a tu disposición. Veamos un ejemplo:
+
+En JavaScript existe una forma fácil de obtener la longitud de un string que te devuelve la cantidad de caracteres que componen el string. Por ejemplo, la longitud de 'hola' es 4 (porque son 4 caracteres) y la de "supercalifragilisticexpialidocious" es 34 (porque son 34 caracteres).
+
+¿Cómo podemos aprender sobre esto? Empieza abriendo Google y realizando una búsqueda con algo como: "obtener la longitud de un string en JavaScript". Esto nos dará varios resultados que nos pueden ayudar.
+
+Seguramente uno de los resultados es de La Red de Desarrolladores de Mozilla (MDN). Ésta fuente es una de las fuentes más confiables para investigar sobre JavaScript. De hecho, el creador de JavaScript, Brendan Eich, es uno de los fundadores del Mozilla Foundation y el Mozilla Corporation. Como dice directamente la web de MDN:
+
+    MDN es una plataforma de aprendizaje para las tecnologías Web y el software con el que funciona la Web, incluyendo:
+
+        Estándares Web como CSS, HTML, y JavaScript.
+        Desarrollo de aplicaciones para Web Abierta.
+        Desarrollo de complementos para Firefox.
+        Desarrollo de Firefox OS.
+
+Lee con detenimiento la sección de string.length que te ofrece MDN. Quizás no entiendas absolutamente todo (especialmente todo lo referente a UTF-16), pero eso está bien. Debes poder manejar ese sentimiento y avanzar con un poco de incentidumbre. Revisa el ejemplo con calma; parece bastante claro cómo es el tema de obtener la longitud de un string:
+
+var x = "Mozilla";
+var empty = "";
+
+console.log("Mozilla tiene " + x.length + " caracteres.");
+/* "Mozilla tiene 7 caracteres" */
+
+console.log("La cadena vacia tiene una longitud de " + empty.length);
+/* "La cadena vacia tiene una longitud de 0" */
+
+Nota: console.log() Es un comando que muestra un mensaje en la consola para facilitar la depuración del código Javascript. La ventaja de usarlo en comparación con, por ejemplo, la función alert(), es que console.log() no detiene la ejecución del código hasta que el usuario acepta el mensaje de alerta como sí sucede con alert().
+
+Después de leer la documentación debería quedar claro que para conocer la longitud de strings, lo que debemos es colocarle un .length al final, así:
+
+var shortWord = 'hola'
+var longWord = "supercalifragilisticexpialidocious"
+
+// Determinar longitud de cada string
+
+var lengthShortWord = shortWord.length;
+var lengthLongWord = longWord.length;
+
+// Imprimir en la consola
+
+console.log(lengthShortWord);
+// returns > 4
+console.log(lengthLongWord);
+// returns > 34
+
+// también podemos imprimir directo en la consola, así:
+console.log('hola'.length);
+// returns > 4
+"supercalifragilisticexpialidocious".length;
+// returns > 34
+
+Practicando el auto-aprendizaje
+
+Ahora que ha quedado demostrado el "súper poder del auto-aprendizaje", lee en MDN otras cosas interesantes que podemos hacer con strings y numbers, como:
+
+    Obtener un caracter específico de un string
+    Obtener el índice de un caracter de un string
+    Convertir a mayúsculas un string
+    Convertir a minúsculas un string
+    Cortando un string
+    Convertir un string en un número nota: este artículo está en inglés. Intenta leerlo con ayuda del traductor de Google
+
+Al final de estas lecturas, debes saber muy bien cómo funcionan:
+
+    charAt()
+    indexOf()
+    toUpperCase()
+    toLowerCase()
+    slice()
+    parseInt()
+
+Otros recursos de auto-aprendizaje
+
+Si aún tienes dudas de estos conceptos, podrías explorar otras formas de auto-aprendizaje:
+
+    Busca otros recursos en la web. Uno muy bueno es stackoverflow. En español suele haber menos contenido de calidad, así que quizás tengas que apoyarte con el traductor de Google.
+    Realiza una consulta en uno de los grupos de Facebook
+    Consulta con una amiga que sepa de programación :)

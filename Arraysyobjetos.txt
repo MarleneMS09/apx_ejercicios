@@ -1,0 +1,31 @@
+//Las listas, o arrays, son una colección de datos del mismo tipo.
+// Los elementos que componen las listas tienen un orden, que siempre comienza por el cero (0). Veamos un ejemplo:
+var listaVacia = [];
+var listaDeNumeros = [16, 22, 356];
+var cosas = ["pelota", "plato", "arena"];
+
+En el ejemplo podemos ver una lista que no tiene elementos (listaVacia), una lista de números (listaDeNumeros) 
+y una lista de strings (cosas). Tal como hacemos con las variables, a las listas se les asigna un nombre y un valor. 
+La diferencia es que en el caso de las listas, podemos declarar una serie de valores,
+separados por comas y envueltos en corchetes ([]).
+
+stas estructuras cuentan con un set de métodos que nos permiten hacer acciones sobre los datos contenidos por las listas. 
+Las acciones pueden ser: agregar elementos, eliminarlos, buscar elementos, ordenarlos, fusionar dos listas, entre otras.
+
+Por otro lado, los objetos u objects son estructuras que representan entidades de la vida real. 
+Este es un concepto tan importante en programación, que incluso existe un paradigma orientado a objetos (POO), 
+pero de eso hablaremos en otro módulo.
+
+Entonces, como decíamos, los objetos nos sirven para describir entidades que existen en el mundo real.
+ La forma de describir esas entidades es mediante atributos, que tienen valores concretos. 
+ Tal como lo vemos en el ejemplo, los objetos en JavaScript se escriben entre llaves ({}). 
+ En el interior, se declaran las propiedades y se les asigna su valor luego de los dos puntos (:). 
+ Entre propiedad y propiedad, se usan comas para separar.
+
+Este formato, que es bastante diferente a cómo veníamos declarando variables, se lo conoce como JSON.
+ Es muy útil para el intercambio de datos y lo vamos a usar mucho a lo largo de la carrera.
+
+Al igual que las listas, los objetos tienen métodos que les permiten realizar ciertas acciones, 
+tales como recorrer los valores de los atributos, modificarlos, eliminarlos o crear nuevos elementos, entre muchas más.
+Para acceder a los valores de los atributos y sobrescribirlos, o para cualquier otra acción sobre los valores,
+ se utiliza la notación de punto. Esta sintaxis nos permite indicar a cuál de las propiedades queremos acceder. 
